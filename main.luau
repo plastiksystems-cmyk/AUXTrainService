@@ -4,7 +4,9 @@ local trains = workspace1.Trains:GetChildren()
 
 for _, train : Model in ipairs(trains) do
 	local seat = train:FindFirstChildOfClass("VehicleSeat")
-	if not seat then return end
+	if not seat then 
+		return 
+	end
 	seat:GetPropertyChangedSignal("Throttle"):Connect(TrainOperationService.StartOperations)
 end
 TrainOperationService.StartOperations()
