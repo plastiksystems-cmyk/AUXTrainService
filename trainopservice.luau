@@ -1,7 +1,6 @@
 local TrainService = {}
 
-local ts = game:GetService("TweenService")
-local cs = game:GetService("CollectionService")
+local TweenService = game:GetService("TweenService")
 
 function TrainService.StartOperations()
 	local trainsFolder = workspace:FindFirstChild("Trains")
@@ -12,10 +11,10 @@ function TrainService.StartOperations()
 	end
 
 	for _, train in ipairs(trainsFolder:GetChildren()) do
-		if train:IsA("Model") and cs:HasTag(train, "Train") then
+		if train:IsA("Model") and train:HasTag("Train") then
 			TrainService.Operations(train)
 		else
-			warn(train.Name .. `is not a Model or doesn't have "Train" tag!`)
+			warn(`{train.Name} is not a Model or doesn't have "Train" tag!`)
 		end
 	end
 end
@@ -60,7 +59,7 @@ function TrainService.Operations(Train : Model)
 			if tweens[wheel] then
 				tweens[wheel]:Cancel()
 			end
-			local tween1 = ts:Create(wheel, TweenInfo.new(10, Enum.EasingStyle.Quad), {AngularVelocity = targetVelocity})
+			local tween1 = TweenService:Create(wheel, TweenInfo.new(10, Enum.EasingStyle.Quad), {AngularVelocity = targetVelocity})
 			tween1:Play()
 			tweens[wheel] = tween1
 		end
