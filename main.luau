@@ -18,7 +18,7 @@ for _, train : Instance in CollectionService:GetTagged(TAG) do
 				throttleConnection:Disconnect()
 				acConnection:Disconnect()
 			end
-		end
+		end)
 	else
 		warn(`[TrainService.Main] Non model given train tag: {train:GetFullName()}`)
 	end
