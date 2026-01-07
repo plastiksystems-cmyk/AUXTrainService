@@ -5,7 +5,7 @@ The useful .luau scripts are placed inside of the scripts folder.
 NOTE: Quick setup may be outdated and will likely only be updated when there is a critical bug fix or a major update
 You can also use the Quick Setup.
 - Copy "quicksetup.luau" to your clipboard.
-- Paste it into the command bar in Studio (https://create.roblox.com/docs/studio/ui-overview#command-bar)
+- Paste it into the [command bar](https://create.roblox.com/docs/studio/ui-overview#command-bar) in Studio
 - Press enter, and check ServerScriptService for "Main"
 ### Installation
 - Insert a ServerScript inside of ServerScriptService
