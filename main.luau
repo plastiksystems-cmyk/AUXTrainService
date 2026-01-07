@@ -1,13 +1,26 @@
+local CollectionService = game:GetService("CollectionService")
+
 local TrainOperationService = require(script:FindFirstChild("TrainOperationService"))
 local trains = workspace:GetDescendants()
 
-for _, train : Instance in ipairs(trains) do
-	if train:IsA("Model") and train:HasTag("Train") then
+local TAG = "Train"
+
+for _, train : Instance in CollectionService:GetTagged(TAG) do
+	if train:IsA("Model") then
 		local seat = train:FindFirstChildOfClass("VehicleSeat")
 		if not seat then 
 			return 
 		end
-		seat:GetPropertyChangedSignal("Throttle"):Connect(TrainOperationService.StartOperations)
+		local throttleConnection = seat:GetPropertyChangedSignal("Throttle"):Connect(TrainOperationService.StartOperations)
+		local acConnection
+		acConnection = seat.AncestryChanged:Connect(function()
+			if seat:IsDescendantOf(workspace) == false then
+				throttleConnection:Disconnect()
+				acConnection:Disconnect()
+			end
+		end
+	else
+		warn(`[TrainService.Main] Non model given train tag: {train:GetFullName()}`)
 	end
 end
 TrainOperationService.StartOperations()
