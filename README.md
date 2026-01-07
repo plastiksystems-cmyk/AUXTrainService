@@ -4,7 +4,6 @@
 - Name the script "Main" or any other name, and **then paste main.luau's contents inside of it**.
 - Create a folder named "Services" and **place it as the Child of the ServerScript**.
 - Insert a ModuleScript as the child of the ServerScript and **then paste trainopservice.luau's contents inside of it**.
-- Create a folder in Workspace named "Trains", insert your trains there.
 ### Requirements
 - Train MUST BE a Model
 - Train MUST HAVE tag "Train"
