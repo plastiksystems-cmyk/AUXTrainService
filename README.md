@@ -8,6 +8,7 @@
 ### Requirements
 - Train MUST BE a Model
 - Train MUST HAVE tag "Train"
+- Train MUST HAVE the "MaxSpeed" attribute
 - Train MUST BE anywhere inside of Workspace
 - The train's VehicleSeat MUST BE set as first child
 ### Optional
