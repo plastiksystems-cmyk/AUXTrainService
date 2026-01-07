@@ -1,7 +1,6 @@
 local CollectionService = game:GetService("CollectionService")
 
 local TrainOperationService = require(script:FindFirstChild("TrainOperationService"))
-local trains = workspace:GetDescendants()
 
 local TAG = "Train"
 
