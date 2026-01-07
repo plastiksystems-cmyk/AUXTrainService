@@ -4,7 +4,13 @@
 - Name the script "Main" or any other name, and **then paste main.luau's contents inside of it**.
 - Insert a ModuleScript as the child of the ServerScript and **then paste trainopservice.luau's contents inside of it**.
 - Name the module script "TrainOperationService" (necessary or doesn't work)
-- Insert your trains inside of Workspace and give them the tag of "Train" and create 2 attributes, "Speed" and "ReverseSpeed", adjust them accordingly. (The 2 attributes must be number type, as you are changing the AngularVelocity property, which is a number.)
+- Insert your trains as a descendant of Workspace and give them the tag of "Train" and create 2 attributes, "Speed" and "ReverseSpeed", adjust them accordingly. (The 2 attributes must be number type, as you are changing the AngularVelocity property, which is a number.)
+### Quick Setup
+NOTE: Quick setup may be outdated and will likely only be updated when there is a critical bug fix or a major update
+You can also use the Quick Setup.
+- Copy "quicksetup.luau" to your clipboard.
+- Paste it into the command bar in Studio (https://create.roblox.com/docs/studio/ui-overview#command-bar)
+- Press enter, and check ServerScriptService for "Main"
 ### Requirements
 - Train MUST BE a Model
 - Train MUST HAVE tag "Train"
@@ -18,4 +24,4 @@
 ### Optional
 none yet
 ### If you find any errors,
-Announce me as soon as possible so I can deal with them.
+Announce Petrulici as soon as possible so I can deal with them.
