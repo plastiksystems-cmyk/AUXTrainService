@@ -11,6 +11,8 @@
 - Train MUST HAVE the "MaxSpeed" attribute
 - Train MUST BE anywhere inside of Workspace
 - The train's VehicleSeat MUST BE set as first child
+- Train's wheels MUST BE named "WheelR" or "WheelL" based on the side of the train they are positioned on. If the controls are in reverse, then reverse the names.
+- The wheels must use HingeConstraints, not SurfaceHinges.
 ### Optional
 - ReverseSpeed (Default set as MaxSpeed / 2)
 ### If you find any errors,
