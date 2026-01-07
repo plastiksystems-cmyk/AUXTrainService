@@ -5,6 +5,7 @@
 - Insert a ModuleScript as the child of the ServerScript and **then paste trainopservice.luau's contents inside of it**.
 - Name the module script "TrainOperationService" (necessary or doesn't work)
 ### Quick Setup
+NOTE: Quick setup may be outdated and will likely only be updated when there is a critical bug fix or a major update
 You can also use the Quick Setup.
 - Copy "quicksetup.luau" to your clipboard.
 - Paste it into the command bar in Studio (https://create.roblox.com/docs/studio/ui-overview#command-bar)
