@@ -1,11 +1,16 @@
 local TrainService = {}
 
 local TweenService = game:GetService("TweenService")
+local CollectionService = game:GetService("CollectionService")
+
+local TAG = "Train"
 
 function TrainService.StartOperations()
-	for _, train in ipairs(workspace:GetChildren()) do
-		if train:IsA("Model") and train:HasTag("Train") then
+	for _, train in CollectionService:GetTagged(TAG) do
+		if train:IsA("Model") then
 			TrainService.Operations(train)
+		else
+			warn(`[TrainService] Non-model was given train tag! {train:GetFullName()}`)
 		end
 	end
 end
