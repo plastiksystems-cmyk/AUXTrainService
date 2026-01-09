@@ -13,7 +13,7 @@ for _, train : Instance in CollectionService:GetTagged(TAG) do
 		local throttleConnection = seat:GetPropertyChangedSignal("Throttle"):Connect(TrainOperationService.StartOperations)
 		local acConnection
 		acConnection = seat.AncestryChanged:Connect(function()
-			if seat:IsDescendantOf(workspace) == false then
+			if not seat:IsDescendantOf(workspace) then
 				throttleConnection:Disconnect()
 				acConnection:Disconnect()
 			end
