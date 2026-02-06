@@ -44,6 +44,7 @@ function TrainService.Operations(Train : Model)
                 if speed <= maxSpeed then
                     speed += 1
                 end
+                task.wait(0.1)
             end
         elseif seat.Throttle == -1 then
             boolval = true
@@ -51,6 +52,7 @@ function TrainService.Operations(Train : Model)
                 if speed >= reverseSpeed then
                     speed -= 1
                 end
+                task.wait(0.1)
             end
         else
             boolval = false
