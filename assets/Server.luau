@@ -1,6 +1,19 @@
+-- © 2026 AuxstarTech
+-- OPEN SOURCE, NO ACCREDITATION NEEDED
+
 local CollectionService = game:GetService("CollectionService")
 
-local TrainOperationService = require(script:FindFirstChild("TrainOperationService"))
+local ServicesFolder = script.Parent:FindFirstChild("Services") :: Folder
+if not ServicesFolder then
+    error("Services folder not found!")
+end
+
+local TrainServiceModule = ServicesFolder:FindFirstChild("TrainOperationService") :: ModuleScript
+if not TrainServiceModule then
+    error("TrainOperationService module not found!")
+end
+
+local TrainOperationService = require(TrainServiceModule)
 
 local TAG = "Train"
 
@@ -8,7 +21,7 @@ for _, train : Instance in CollectionService:GetTagged(TAG) do
 	if train:IsA("Model") then
 		local seat = train:FindFirstChildOfClass("VehicleSeat")
 		if not seat then 
-			return 
+			continue
 		end
 		local throttleConnection = seat:GetPropertyChangedSignal("Throttle"):Connect(TrainOperationService.StartOperations)
 		local acConnection
