@@ -6,11 +6,12 @@ NOTE: Quick setup may be outdated and will likely only be updated when there is 
 You can also use the Quick Setup.
 - Copy "quicksetup.luau" to your clipboard.
 - Paste it into the [command bar](https://create.roblox.com/docs/studio/ui-overview#command-bar) in Studio
-- Press enter, and check ServerScriptService for "Main"
+- Press enter, and check ServerScriptService for "Server"
 ### Installation
 - Insert a ServerScript inside of ServerScriptService
-- Name the script "Main" or any other name, and **then paste main.luau's contents inside of it**.
-- Insert a ModuleScript as the child of the ServerScript and **then paste trainopservice.luau's contents inside of it**.
+- Name the script "Server" or any other name, and **then paste main.luau's contents inside of it**.
+- Insert a folder named "Services"
+- Insert a ModuleScript as the child of the Service folder and **then paste trainopservice.luau's contents inside of it**.
 - Name the module script "TrainOperationService" (necessary or won't work)
 - Insert your trains as a descendant of Workspace and give them the tag of "Train" and create 2 attributes, "Speed" and "ReverseSpeed", adjust them accordingly. (The 2 attributes must be number type, as you are changing the AngularVelocity property, which is a number.)
 ### Requirements
