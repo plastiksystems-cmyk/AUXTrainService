@@ -1,0 +1,52 @@
+-- RAILMAN V1.3 © 2026 AuxstarTech
+-- OPEN SOURCE, NO ACCREDITATION NEEDED
+-- BROUGHT TO YOU BY: Petrulici, highzpeedtrain
+--=====================================================================================
+-- INFORMATION
+---------------------------------------------------------------------------------------
+-- https://github.com/plastiksystems-cmyk/AUXTrainService
+--=====================================================================================
+-- BINDABLE FUNCTIONS
+---------------------------------------------------------------------------------------
+--
+-- Name: GetTrain
+--
+-- FullName: game.ServerScriptService["Railman V1.3"].Functions.GetTrain
+--
+-- Parameters: Player : Player
+-- Return: Train : Model | boolean
+--
+-- Example:
+--
+-- local Train = GetTrain:Invoke(Player : Player) : Model | boolean
+-- if not Train then return end
+--
+---------------------------------------------------------------------------------------
+--
+-- Name: GetTrainOccupant (A Player, not Humanoid unlike VehicleSeat.Occupant)
+--
+-- FullName: game.ServerScriptService["Railman V1.3"].Functions.GetTrainOccupant
+--
+-- Parameters: Train : Model
+-- Return: Player : Player | boolean
+--
+-- Example:
+-- local Occupant = GetTrain:Invoke(Train : Model) : Player | boolean
+-- if not Occupant then return end
+--
+--=====================================================================================
+-- REMOTE EVENTS
+--=====================================================================================
+--
+-- Name: InputBegan
+--
+-- FullName: game.ReplicatedStorage.Events.InputBegan
+--
+-- Parameters: ActionName (From ContextActionService)
+--
+-- Return: N/A (its a remote event what do you think)
+--
+-- Example: lazy go find out yourself
+
+
+
